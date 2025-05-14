@@ -184,4 +184,12 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-})();
+// Fix: Activate clicked nav link
+document.querySelectorAll('#navmenu a').forEach(link => {
+  link.addEventListener('click', function () {
+    // Remove 'active' from all links
+    document.querySelectorAll('#navmenu a.active').forEach(el => el.classList.remove('active'));
+    // Add 'active' to clicked link
+    this.classList.add('active');
+  });
+});
