@@ -187,7 +187,7 @@
   /**
    * Navmenu Scrollspy
    */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
+let navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
     navmenulinks.forEach(navmenulink => {
@@ -201,9 +201,14 @@
       } else {
         navmenulink.classList.remove('active');
       }
-    })
+    });
   }
-  window.addEventListener('load', navmenuScrollspy);
+
+  window.addEventListener('load', () => {
+    navmenuScrollspy();
+    setTimeout(navmenuScrollspy, 100); // Fix: run again after layout settles
+  });
+
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
