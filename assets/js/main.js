@@ -1,11 +1,7 @@
 (function() {
   "use strict";
 
-  // ... [your existing code remains unchanged]
-
-  /**
-   * Navmenu Scrollspy
-   */
+  // Navmenu Scrollspy
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
@@ -20,14 +16,13 @@
       } else {
         navmenulink.classList.remove('active');
       }
-    })
+    });
   }
+
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  /**
-   * Highlight active nav link on click
-   */
+  // Highlight active nav link on click
   document.querySelectorAll('#navmenu a').forEach(link => {
     link.addEventListener('click', function () {
       document.querySelectorAll('#navmenu a').forEach(el => el.classList.remove('active'));
@@ -35,9 +30,7 @@
     });
   });
 
-  /**
-   * Highlight nav link based on current URL on page load
-   */
+  // Highlight nav link based on current URL on page load
   window.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname.split('/').pop(); // e.g., "about.html"
     document.querySelectorAll('#navmenu a').forEach(link => {
@@ -51,4 +44,3 @@
   });
 
 })();
-
