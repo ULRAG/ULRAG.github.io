@@ -1838,6 +1838,13 @@ section,
   color: var(--accent-color);
 }
 
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
