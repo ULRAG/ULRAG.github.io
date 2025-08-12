@@ -1851,3 +1851,6 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+.text-red-custom {
+  color: #990000; /* Example: Firebrick red, adjust hex to your brand's exact red */
+}
